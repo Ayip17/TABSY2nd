@@ -1,0 +1,94 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/tvBeranda">
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Halo! Ayo jelajahi restoran"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/search_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cari restoran"
+        android:background="@drawable/round_corner"
+        android:padding="8dp"
+        android:layout_margin="8dp"/>
+
+    <Spinner
+        android:id="@+id/people_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_corner"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/date_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Tanggal"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/time_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Waktu"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="@android:color/holo_orange_light"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="Rekomendasi"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recommended_restaurants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:text="Terdekat"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nearest_restaurants"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

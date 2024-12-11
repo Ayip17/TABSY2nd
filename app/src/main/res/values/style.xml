@@ -1,0 +1,9 @@
+<resources>
+    <style name="BottomNavTextStyleActive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:paddingTop">4dp</item> <!-- Padding atas -->
+    </style>
+
+    <style name="BottomNavTextStyleInactive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:paddingTop">4dp</item>
+    </style>
+</resources>

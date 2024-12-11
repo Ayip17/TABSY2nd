@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ecad3b"/> <!-- Warna tombol -->
+    <corners android:radius="4dp"/> <!-- Mengurangi radius sudut -->
+</shape>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TABSY2nd</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string-array name="people_count_array">
+        <item>1 Orang</item>
+        <item>2 Orang</item>
+        <item>3 Orang</item>
+        <item>4 Orang (atau lebih)</item>
+    </string-array>
+</resources>
