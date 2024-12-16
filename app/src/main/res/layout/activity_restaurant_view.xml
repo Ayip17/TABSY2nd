@@ -1,0 +1,51 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvRestaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Restoran"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRestaurantDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi restoran..."
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvRestaurantLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat lengkap restoran..."
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvRestaurantPriceRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga: RpXX.XXX"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnBookTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesan Meja"
+        android:background="@android:color/holo_green_light"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tambahkan FrameLayout untuk menampung fragment -->
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

@@ -11,21 +11,17 @@ import java.util.*
 
 class ReservasiFragment : Fragment(R.layout.fragment_reservasi) {
 
-    @SuppressLint("SetTextI18n")
+    private var countDewasa = 0
+    private var countAnak = 0
+    private var countBalita = 0
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Referensi ke views
+        // Date Picker
         val btnDatePicker: Button = view.findViewById(R.id.btnDatePicker)
         val tvSelectedDate: TextView = view.findViewById(R.id.tvSelectedDate)
-        val btnTimePicker: Button = view.findViewById(R.id.btnTimePicker)
-        val tvSelectedTime: TextView = view.findViewById(R.id.tvSelectedTime)
-        val spinnerOptions: Spinner = view.findViewById(R.id.spinnerOptions)
-        val tvSelectedOption: TextView = view.findViewById(R.id.tvSelectedOption)
-
-
-        // Tombol DatePicker
         btnDatePicker.setOnClickListener {
             val calendar = Calendar.getInstance()
             val year = calendar.get(Calendar.YEAR)
@@ -38,7 +34,9 @@ class ReservasiFragment : Fragment(R.layout.fragment_reservasi) {
             }, year, month, day).show()
         }
 
-        // Tombol TimePicker
+        // Time Picker
+        val btnTimePicker: Button = view.findViewById(R.id.btnTimePicker)
+        val tvSelectedTime: TextView = view.findViewById(R.id.tvSelectedTime)
         btnTimePicker.setOnClickListener {
             val calendar = Calendar.getInstance()
             val hour = calendar.get(Calendar.HOUR_OF_DAY)
@@ -50,19 +48,69 @@ class ReservasiFragment : Fragment(R.layout.fragment_reservasi) {
             }, hour, minute, true).show()
         }
 
-        // Spinner Dropdown Menu
-        val options = listOf("Opsi 1", "Opsi 2", "Opsi 3")
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, options)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerOptions.adapter = adapter
+        //Counter
+        val tvTotalPelanggan: TextView = view.findViewById(R.id.tvTotalPelanggan)
 
-        spinnerOptions.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selectedOption = options[position]
-                tvSelectedOption.text = "Pilihan: $selectedOption"
+        // Dewasa
+        val btnMinusDewasa: Button = view.findViewById(R.id.btnMinusDewasa)
+        val btnPlusDewasa: Button = view.findViewById(R.id.btnPlusDewasa)
+        val tvCountDewasa: TextView = view.findViewById(R.id.tvCountDewasa)
+
+        btnMinusDewasa.setOnClickListener {
+            if (countDewasa > 0) {
+                countDewasa--
+                tvCountDewasa.text = countDewasa.toString()
+                updateTotal(tvTotalPelanggan)
             }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
+
+        btnPlusDewasa.setOnClickListener {
+            countDewasa++
+            tvCountDewasa.text = countDewasa.toString()
+            updateTotal(tvTotalPelanggan)
+        }
+
+        // Anak-anak
+        val btnMinusAnak: Button = view.findViewById(R.id.btnMinusAnak)
+        val btnPlusAnak: Button = view.findViewById(R.id.btnPlusAnak)
+        val tvCountAnak: TextView = view.findViewById(R.id.tvCountAnak)
+
+        btnMinusAnak.setOnClickListener {
+            if (countAnak > 0) {
+                countAnak--
+                tvCountAnak.text = countAnak.toString()
+                updateTotal(tvTotalPelanggan)
+            }
+        }
+
+        btnPlusAnak.setOnClickListener {
+            countAnak++
+            tvCountAnak.text = countAnak.toString()
+            updateTotal(tvTotalPelanggan)
+        }
+
+        // Balita
+        val btnMinusBalita: Button = view.findViewById(R.id.btnMinusBalita)
+        val btnPlusBalita: Button = view.findViewById(R.id.btnPlusBalita)
+        val tvCountBalita: TextView = view.findViewById(R.id.tvCountBalita)
+
+        btnMinusBalita.setOnClickListener {
+            if (countBalita > 0) {
+                countBalita--
+                tvCountBalita.text = countBalita.toString()
+                updateTotal(tvTotalPelanggan)
+            }
+        }
+
+        btnPlusBalita.setOnClickListener {
+            countBalita++
+            tvCountBalita.text = countBalita.toString()
+            updateTotal(tvTotalPelanggan)
+        }
+    }
+
+    private fun updateTotal(totalView: TextView) {
+        val total = countDewasa + countAnak + countBalita
+        totalView.text = "Total Pelanggan: $total"
     }
 }

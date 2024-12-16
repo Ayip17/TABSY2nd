@@ -7,6 +7,41 @@
 
     <!-- Tombol untuk memilih tanggal -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvSelectedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="8dp"
+            android:text="Tanggal: "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSelectedTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="8dp"
+            android:text="Waktu: "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTotalPelanggan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total: 0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnDatePicker"
         android:layout_width="match_parent"
@@ -14,46 +49,20 @@
         android:text="Pilih Tanggal" />
 
     <!-- TextView untuk menampilkan tanggal -->
-    <TextView
-        android:id="@+id/tvSelectedDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Tanggal yang Dipilih"
-        android:textSize="16sp" />
 
     <!-- Tombol untuk memilih waktu -->
     <Button
         android:id="@+id/btnTimePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Pilih Waktu" />
 
     <!-- TextView untuk menampilkan waktu -->
-    <TextView
-        android:id="@+id/tvSelectedTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Waktu yang Dipilih"
-        android:textSize="16sp" />
 
     <!-- Spinner untuk DropDown Menu -->
-    <Spinner
-        android:id="@+id/spinnerOptions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
 
     <!-- TextView untuk menampilkan pilihan dropdown -->
-    <TextView
-        android:id="@+id/tvSelectedOption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Pilihan yang Dipilih"
-        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -197,7 +206,9 @@
                     android:layout_height="40dp"
                     android:text="+" />
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>
