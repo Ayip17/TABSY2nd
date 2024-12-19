@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.kel3.tabsy2nd" />
+                  <option name="mobileSdkAppId" value="1:289065335401:android:96473cb12081afc26a40f8" />
+                  <option name="projectId" value="tabsy2nd-2c547cd1" />
+                  <option name="projectNumber" value="289065335401" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

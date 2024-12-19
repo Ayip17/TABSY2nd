@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289065335401",
+    "project_id": "tabsy2nd-2c547cd1",
+    "storage_bucket": "tabsy2nd-2c547cd1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289065335401:android:96473cb12081afc26a40f8",
+        "android_client_info": {
+          "package_name": "com.kel3.tabsy2nd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289065335401-0tf785aghlsca9ve91g2ct8otlo98462.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArP6VlfWjmVbhImdpL91sU44qA1mwJpeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289065335401-0tf785aghlsca9ve91g2ct8otlo98462.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
